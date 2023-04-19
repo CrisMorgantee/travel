@@ -1,11 +1,11 @@
 <x-layouts.base>
   <x-container class="flex items-center justify-center">
-    <section class="font-semibold flex flex-col h-full justify-center">
-      <h1 class="font-bold text-3xl mb-8">Boilerplate Laravel</h1>
+    <section class="flex h-full flex-col justify-center font-semibold">
+      <h1 class="mb-8 text-3xl font-bold">Boilerplate Laravel</h1>
 
-      <h3 class="text-lg flex items-center">
+      <h3 class="flex items-center text-lg">
         <span class="mr-3">Laravel Version</span>
-        <span class="bg-slate-600 text-xs p-1 rounded"> {{ app()->version() }} </span>
+        <span class="rounded bg-slate-600 p-1 text-xs"> {{ app()->version() }} </span>
       </h3>
 
     </section>

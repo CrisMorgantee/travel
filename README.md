@@ -1,4 +1,4 @@
-# Boilerplate Laravel to initialize a application faster.
+# Application to managment travel and drivings
 
 ## What is inside?
 
