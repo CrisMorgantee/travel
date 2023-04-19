@@ -14,6 +14,7 @@
 
   <!-- Scripts -->
   @vite(['resources/css/app.css', 'resources/js/app.js'])
+  @livewireStyles
 </head>
 
 <body class="font-sans antialiased">
@@ -21,19 +22,21 @@
     @include('layouts.navigation')
 
     <!-- Page Heading -->
-    {{-- @if (isset($header))
+    @if (isset($header))
       <header class="border-b border-theme-gray-3 bg-theme-gray-4 shadow">
         <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
           {{ $header }}
         </div>
       </header>
-    @endif --}}
+    @endif
 
     <!-- Page Content -->
     <main>
       {{ $slot }}
     </main>
   </div>
+
+  @livewireScripts
 </body>
 
 </html>
