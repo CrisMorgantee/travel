@@ -15,8 +15,9 @@ module.exports = {
       },
       colors: {
         theme: {
-          'gradient': 'linear-gradient(90deg, #6E28E0 0%, #EB2F93 100%);',
-          'purple': '#712DE0',
+          'gradient': 'linear-gradient(90deg, #0E93BC 0%, #0E5C94 100%);',
+          'blue': '#0E93BC',
+          'blue-dark': '#0E5C94',
           'pink': '#EB2F93',
           'red': '#E03F3F',
           'green': '#39CC59',
