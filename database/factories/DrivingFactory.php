@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -19,9 +18,9 @@ class DrivingFactory extends Factory
     {
         return [
             'start_driving_at' => now(),
-            'end_driving_at' => now(),
-            'stoped_at' => null,
-            'continued_at' => null,
+            'end_driving_at'   => now(),
+            'stoped_at'        => null,
+            'continued_at'     => null,
         ];
     }
 }

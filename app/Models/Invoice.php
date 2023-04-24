@@ -11,10 +11,9 @@ class Invoice extends Model
     use HasFactory;
 
     protected $fillable = [
-      'travel_id',
-      'invoice_number',
-  ];
-
+        'travel_id',
+        'invoice_number',
+    ];
 
     public function travel(): BelongsTo
     {

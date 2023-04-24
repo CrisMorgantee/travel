@@ -12,7 +12,7 @@ return new class () extends Migration {
      */
     public function up(): void
     {
-        Schema::create('teams', function (Blueprint $table) {
+        Schema::create('teams', function(Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class, 'user_id');
             $table->foreignIdFor(Travel::class, 'travel_id');

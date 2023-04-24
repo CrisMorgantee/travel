@@ -15,15 +15,15 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         \App\Models\User::factory()->create([
-            'name' => 'Cristiano Morgante',
+            'name'  => 'Cristiano Morgante',
             'email' => 'cristiano@digisonic.com.br',
         ]);
 
         $this->call([
-          TravelSeeder::class,
-          TeamSeeder::class,
-          DrivingSeeder::class,
-          InvoiceSeeder::class,
-      ]);
+            TravelSeeder::class,
+            TeamSeeder::class,
+            DrivingSeeder::class,
+            InvoiceSeeder::class,
+        ]);
     }
 }

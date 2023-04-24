@@ -10,7 +10,7 @@ return new class () extends Migration {
      */
     public function up(): void
     {
-        Schema::create('travel', function (Blueprint $table) {
+        Schema::create('travel', function(Blueprint $table) {
             $table->id();
             $table->string('itinerary');
             $table->timestamps();

@@ -2,9 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Travel;
-use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DrivingSeeder extends Seeder
