@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="border-b border-theme-gray-3 bg-theme-gray-4">
+<nav x-data="{ open: false }" class="border-b border-gray-600 bg-theme-gray-5">
   <!-- Primary Navigation Menu -->
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 justify-between">
@@ -48,7 +48,7 @@
 
               <x-dropdown-link :href="route('logout')"
                 onclick="event.preventDefault();
-                                                this.closest('form').submit();">
+                this.closest('form').submit();">
                 {{ __('Sair') }}
               </x-dropdown-link>
             </form>

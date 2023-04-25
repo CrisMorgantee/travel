@@ -11,6 +11,7 @@ class Travel extends Model
     use HasFactory;
 
     protected $fillable = [
+        'registered_by',
         'itinerary'
     ];
 

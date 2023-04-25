@@ -17,7 +17,8 @@ class TravelFactory extends Factory
     public function definition(): array
     {
         return [
-            'itinerary' => fake()->sentence()
+            'registered_by' => 1,
+            'itinerary'     => fake()->sentence()
         ];
     }
 }

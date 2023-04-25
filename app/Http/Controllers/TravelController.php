@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Travel;
+use App\Models\Team;
 use Illuminate\Http\Request;
 
 class TravelController extends Controller
@@ -28,7 +29,15 @@ class TravelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data                  = $request->all();
+        $data['registered_by'] = $request->user_id;
+        $newTravel             = Travel::query()->create($data);
+
+        foreach ($data['team'] as $member => $value) {
+            Team::query()->create(['user_id' => $value, 'travel_id' => $newTravel->id]);
+        }
+
+        return back();
     }
 
     /**
