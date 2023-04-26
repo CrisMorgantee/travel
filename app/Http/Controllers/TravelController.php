@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Invoice;
 use App\Models\Travel;
 use App\Models\Team;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class TravelController extends Controller
@@ -13,7 +15,7 @@ class TravelController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard', ['travels' => Travel::query()->orderBy('created_at', 'desc')->paginate(10)->load(['team', 'invoices']), 'employees' => User::all()]);
     }
 
     /**
@@ -37,7 +39,11 @@ class TravelController extends Controller
             Team::query()->create(['user_id' => $value, 'travel_id' => $newTravel->id]);
         }
 
-        return back();
+        if (!empty($request['invoice_number'])) {
+            Invoice::query()->create(['invoice_number' => $data['invoice_number'], 'travel_id' => $newTravel->id]);
+        }
+
+        return redirect('dashboard');
     }
 
     /**

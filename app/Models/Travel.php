@@ -29,4 +29,13 @@ class Travel extends Model
     {
         return $this->hasMany(Team::class);
     }
+
+    public function registeredBy()
+    {
+        // dd($this->registered_by);
+        $user = User::query()->where('id', $this->registered_by)->get('name')->first();
+        // dd($user);
+
+        return $user->name;
+    }
 }
